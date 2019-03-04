@@ -141,15 +141,7 @@
 								<p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Reach out any time with your questions or to place an order.</p>
 							</div>
 
-							<form id="contactForm" class="contact-form appear-animation" action="php/contact-form.php" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600">
-								<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-									<strong>Success!</strong> Your message has been sent to us.
-								</div>
-
-								<div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-									<strong>Error!</strong> There was an error sending your message.
-									<span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
-								</div>
+							<form id="contactForm" name='contact' class="contact-form appear-animation" method="POST" data-netlify="true" data-appear-animation="fadeIn" data-appear-animation-delay="600">
 
 								<div class="form-row">
 									<div class="form-group col-lg-6">
