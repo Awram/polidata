@@ -33,7 +33,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400" rel="stylesheet" type="text/css">
 
 		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.min.css">
 		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
@@ -448,8 +449,21 @@
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
 		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
 		<script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-		<script src="vendor/popper/umd/popper.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Bootstrap JS CDN -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+		<!-- Bootstrap JS local fallback -->
+		<script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"><\/script>')}</script>
+		<!-- Bootstrap CSS local fallback -->
+		<div id="bootstrapCssTest" class="hidden"></div>
+		<script>
+			$(function() {
+				if ($('#bootstrapCssTest').is(':visible')) {
+					$("head").prepend('<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">');
+				}
+			});
+		</script>
+
 		<script src="vendor/common/common.min.js"></script>
 		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
 		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
